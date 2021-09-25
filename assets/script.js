@@ -48,6 +48,7 @@ choiceD.addEventListener("click", dSelcted);
 
 var currentQuestion = questions[Math.floor(Math.random() * questions.length)];
 
+
 function startGame(){
     startTimer();
     getQuestion();
@@ -70,7 +71,9 @@ function getQuestion(){
     console.log(currentQuestion)
     question.textContent = currentQuestion.questionText;
     answers.textContent = currentQuestion.choices;
+
 }
+
 
 
 function aSelected(){
@@ -104,7 +107,7 @@ function cSelcted(){
     if (currentQuestion.answer === "C") {
         window.alert("Correct!") 
         localStorage.setItem("correct", "+1")
-            getQuestion();
+        getQuestion();
         }
     else { window.alert("Incorrect!") 
         getQuestion();
@@ -126,6 +129,11 @@ function dSelcted(){
 }
 
 function deductTime(){
-    timeLeft -- ,5000
+    timeLeft = timeLeft -5;
+
 }
+
+
+
+
 
